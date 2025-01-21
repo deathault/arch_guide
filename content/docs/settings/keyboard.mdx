@@ -1,0 +1,22 @@
+---
+title: Клавиатура
+---
+import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
+
+## Раскладка
+Делаем смену раскладки по `Alt+Shift`:
+
+
+```sh title="Теминал"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift>Alt_L']"
+&& gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift_L']"
+```
+## Горячие клавиши
+
+В настройках клавиатуры идем в самый низ "Просмотр и изменение комбинаций клавиш", снимки экрана, Сделать снимок экрана интерактивно.
+Меняем на `Shift+Super+S`. 
+
+Мои дополнительные комбинации клавиш:
+
+![img](/hotkeys.png)
+

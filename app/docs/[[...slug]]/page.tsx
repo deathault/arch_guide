@@ -23,12 +23,7 @@ export default async function Page(props: {
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
-      <MDX
-  components={{
-    ...defaultMdxComponents,
-    img: (props) => <ImageZoom {...(props as any)} />,
-  }}
-/>
+        <MDX components={{ ...defaultMdxComponents }} />
       </DocsBody>
     </DocsPage>
   );
