@@ -1,0 +1,6 @@
+{
+    "title": "Настройка",
+    "icon": "Settings2",
+    "pages": ["keyboardlayout", "yay", "pacman", "gnome"]
+
+}
