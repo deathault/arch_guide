@@ -2,3 +2,37 @@
 title: Установка
 description: Устанавливаем дистрибутив при помощи скрипта archinstall
 ---
+import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
+
+После загрузки будет куча букв, где ОС будет загружаться в оперативку, но в конечном итоге покажет тебе такие сиськи:
+
+![img](/startinst.png)
+
+Это значит что можно стартовать установку. Но тут есть нюанс - тебе нужна сеть. Если твое корыто оборудовано Ethernet портом то все ништяк. 
+А если нет? А если у тебя ваще макбук с ебучим реалтеком? Мой те совет: берешь смартфон, врубаешь режим модема и подрубаешь в USB. Система сама его найдет и будет все загружать медленно но исправно.
+
+Пиши:
+
+<DynamicCodeBlock lang="bash" code="archinstall" /> 
+
+и погнали. 
+
+![img](/archinstall.png)
+
+Скрипт установки проверит новую версию, и запустить GUI установщик в терминале. 
+Далее ничего сложного, тыкай да ставь нужные параметры, я же буду делать так как в табличке ниже:
+
+| Параметр | Че ставить |
+| ----- | ----------- |
+| Locales | ru_RU/UTF-8 |
+| Mirror region | Russia |
+| Disk configuration | best-effort (default) \ выбираем свой диск \ ext4 |
+| Bootloader | Grub |
+| User account |  Add User - создаем нового пользователя и пароль \ соглашаемся сделать его superuser'ом \ Confirm and exit |
+| Profile - Type |  Desktop - Gnome |
+| Profile - Graphics driver |  Тут выбираем по своей железке, у меня RX 6700 XT, поэтому mesa |
+| Profile - Greeter | gdm |
+| Network configuration | Use NetworkManager |
+| Optional repositories | multilib |
+
+Далее жмем Install, одеваемся и идем за пивом. 
