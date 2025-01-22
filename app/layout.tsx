@@ -2,7 +2,8 @@ import './global.css';
 import { RootProvider } from 'fumadocs-ui/provider';
 import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
-
+import { Suspense } from "react";
+import { Metrika } from "metric";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,6 +18,9 @@ export default function Layout({ children }: { children: ReactNode }) {
       type: 'static',
     },
   }}>{children}</RootProvider>
+   <Suspense>
+          <Metrika />
+        </Suspense>
       </body>
     </html>
   );
