@@ -2,8 +2,6 @@
 title: Установка
 description: Устанавливаем дистрибутив при помощи скрипта archinstall
 ---
-import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
-
 После загрузки будет куча букв, где ОС будет загружаться в оперативку, но в конечном итоге покажет тебе такие сиськи:
 
 ![img](/startinst.png)
@@ -12,8 +10,9 @@ import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
 А если нет? А если у тебя ваще макбук с ебучим реалтеком? Мой те совет: берешь смартфон, врубаешь режим модема и подрубаешь в USB. Система сама его найдет и будет все загружать медленно но исправно.
 
 Пиши:
-
-<DynamicCodeBlock lang="bash" code="archinstall" /> 
+```sh title="Теминал"
+archinstall
+```
 
 и погнали. 
 
@@ -41,4 +40,6 @@ import { DynamicCodeBlock } from 'fumadocs-ui/components/dynamic-codeblock';
 
 Далее перезагружаемся в установленную систему:
 
-<DynamicCodeBlock lang="bash" code="reboot" /> 
+```sh title="Теминал"
+reboot
+```

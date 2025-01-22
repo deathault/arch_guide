@@ -1,3 +1,36 @@
 ---
 title: Утилита yay для AUR
 ---
+
+Давай сразу установим `yay`, для использования здоровенной базы репозитория пакетов `AUR`. Это та самая хуйня где и google-chrome есть, калькуляторы каллорий для беременных, ну и прочая гадость.
+
+```sh title="Теминал"
+sudo pacman -S git --noconfirm && cd /opt && sudo git clone https://aur.archlinux.org/yay-git.git && sudo chown -R $USER:$(id -gn) ./yay-git && cd yay-git && makepkg -si && yay -Syu
+```
+
+*Здесь мы установим git, зайдем в папку /opt, скачаем yay, и соберем его*.
+
+Далее можем устанавливать пакеты. Например, нам требуется `google-chrome`, ниже приведу команды для работы с `yay`:
+
+```sh title="Поиск пакетов"
+yay google-chrome
+```
+
+```sh title="Установка пакетов"
+yay -S google-chrome
+```
+
+```sh title="Обновить все пакеты"
+yay -Syu
+```
+
+```sh title="Удалить пакеты"
+yay -R google-chrome
+```
+```sh title="Удалить пакеты и зависимости"
+yay -Rns google-chrome
+```
+<Callout type="info">
+  Хочу заметить, что при использовании yay, вам не нужно больше юзать pacman. При обновлении `yay -Syu` он обновит как официальные пакеты, так и пакеты из `AUR`.
+  Удобство сука.
+</Callout>
