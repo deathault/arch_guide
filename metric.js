@@ -9,7 +9,7 @@ export function Metrika() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    ym(XXXXXXXX, "hit", window.location.href);
+    ym(99626160, "hit", window.location.href);
   }, [pathName, searchParams]);
 
   return (
