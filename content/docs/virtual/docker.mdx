@@ -1,0 +1,28 @@
+---
+title: Docker
+description: Как поставить Docker на Arch Linux
+---
+
+## Установка Docker без клиента
+
+```sh title="Терминал"
+sudo pacman -S docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+```
+
+## Установка Docker Desktop
+
+```sh title="Ставим бинарник"
+wget https://download.docker.com/linux/static/stable/x86_64/docker-27.5.0.tgz -qO- | tar xvfz - docker/docker --strip-components=1
+mv ./docker /usr/local/bin
+
+```
+
+Далее [загружай](https://docs.docker.com/desktop/release-notes/) последний релиз для арча
+
+```sh title="Ставим пакет клиента"
+sudo pacman -U ./docker-desktop-x86_64.pkg.tar.zst
+```
+
